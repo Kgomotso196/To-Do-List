@@ -6,7 +6,7 @@ const todoTasks = [
   { index: 3, type: 'Code Maintenance', completed: true },
 ];
 
-const todoHolder = document.querySelector('');
+const todoHolder = document.querySelector('.main-holder');
 
 const todos = todoTasks.map((todo) => `
   <div class="todoTasks">
