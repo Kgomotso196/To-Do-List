@@ -1,14 +1,20 @@
-import _ from 'lodash';
 import './style.css';
 
-function component() {
-  const element = document.createElement('div');
+const todoTasks = [
+  { index: 1, type: 'Code Development', completed: true },
+  { index: 2, type: 'Code Testing', completed: false },
+  { index: 3, type: 'Code Maintenance', completed: true },
+];
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+const todoHolder = document.querySelector('');
 
-  return element;
-}
+const todos = todoTasks.map((todo) => `
+  <div class="todoTasks">
+    <div class="task"><input type="checkbox" id="checkBox" name="checkbox" value="1">
+      <label for="checkBox">${todo.type}</label>
+    </div>
+    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+  </div>
+`).join('');
 
-document.body.appendChild(component());
+todoHolder.innerHTML = todos;
