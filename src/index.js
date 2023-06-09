@@ -35,7 +35,6 @@ taskContainer.addEventListener('click', (e) => {
   }
 });
 
- Functionality.displayTask();
  taskContainer.addEventListener('click', (e) => {
    if (e.target !== null && e.target !== 'NaN' && e.target !== '') {
      if (e.target.className === 'deleteButton') {
