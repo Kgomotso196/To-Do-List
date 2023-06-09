@@ -65,7 +65,7 @@ input:focus {
   justify-content: center;
   align-items: center;
   margin: auto;
-  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 5px 20px 0 rgb(0 0 0 / 0%);
+  box-shadow: 0 4px 8px 0 rgba(57, 48, 48, 0.2), 0 5px 20px 0 rgb(0 0 0 / 0%);
 }
 
 form {
