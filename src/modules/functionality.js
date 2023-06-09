@@ -1,5 +1,14 @@
 /*eslint-disable*/
 export  class Functionality {
+    static newTask() {
+      const inputData = document.getElementById('text-section').value;
+      const saveData = document.getElementById('text-form');
+      const storage = this.getAllTasks().length+1;
+      const task = [{ description: inputData, completed: false, index: parseInt(storage) }];
+      this.saveTask(task);
+      this.displayTask();
+      saveData.reset();
+    }
     static displayTask() {
       const div = document.querySelector('#todo-holder');
       div.innerHTML = '';
