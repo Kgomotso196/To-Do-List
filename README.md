@@ -89,7 +89,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://kgomotso196.github.io/To-Do-List/)
+- [Live Demo Link](https://kgomotso196.github.io/To-Do-List/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
