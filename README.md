@@ -175,6 +175,7 @@ You can deploy this project using:
 - [ ] **Desktop Responsivness**
 - [ ] **Animation**
 - [ ] **Write unit tests for a JavaScript app.**
+- [ ] **Add interactive list**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
