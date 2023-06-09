@@ -4,12 +4,35 @@ import './style.css';
 import { Functionality } from './modules/functionality';
 const taskContainer = document.getElementById('first-section');
 const submitButton = document.getElementById('for-button');
-let editButtonStats=false;
+const clearAllDone = document.getElementById('clear-all');
+let editButtonStats = false;
 window.onload = function windowReady() {
   Functionality.displayTask();
   submitButton.onclick = function () {
     Functionality.newTask();
   };
+
+taskContainer.addEventListener('click', (e) => {
+  if (e.target !== null && e.target !== 'NaN' && e.target !== '') {
+    if (e.target.className === 'checkbox-class') {
+      const ids = e.target.id.replace('checkbox-', '');
+      let description = document.getElementById('d' + ids);
+      let data = Functionality.getAllTasks();
+      const index = parseInt(ids-1, 10);
+      if (data !== []) {
+        if (data[index].completed) {
+          data[index].completed = false;
+          description.style.textDecoration = 'none';
+        }
+        else {
+          data[index].completed = true;
+          description.style.textDecoration = 'line-through';
+        }
+        Functionality.updateTask(data);
+      }
+    }
+  }
+});
 
 taskContainer.addEventListener('click', (e) => {
   if (e.target !== null && e.target !== 'NaN' && e.target !== '') {
@@ -47,6 +70,16 @@ taskContainer.addEventListener('click', (e) => {
        }
      }
    }
+ });
+
+ clearAllDone.addEventListener('click', (e)=> {
+  const data = Functionality.getAllTasks();
+  const storage = data.filter((todo)=>todo.completed === false);
+  for (let i = 0; i < storage.length; i++) {
+    storage[i].index = i + 1;
+  }
+  Functionality.updateTask(storage);
+  Functionality.displayTask();
  });
 
 };
