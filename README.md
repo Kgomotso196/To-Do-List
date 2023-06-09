@@ -84,6 +84,8 @@
 - **Understand improvements that ES6 brings to JavaScript.**
 - **Use npm as software packages system.**
 - **Build a website based on an existing website.**
+- **Add interactive list**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -172,10 +174,9 @@ You can deploy this project using:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **More section inclusiveness**
-- [ ] **Desktop Responsivness**
+- [ ] **Desktop Responsiveness**
 - [ ] **Animation**
 - [ ] **Write unit tests for a JavaScript app.**
-- [ ] **Add interactive list**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
